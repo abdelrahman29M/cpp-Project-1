@@ -79,7 +79,7 @@ string ChoiceName(enGameChoice Choice)
 	return arrGameChoices[Choice - 1];
 }
 
-void SetWinnerScreenColor(enWinner Winner)
+void SetWinnerScreenColors(enWinner Winner)
 {
 	switch (Winner)
 	{
@@ -106,7 +106,7 @@ void PrintRoundResults(stRoundInfo RoundInfo)
 	cout << " Round Winner : [" << RoundInfo.WinnerName << "]\n";
 	cout << "________________________________________________________________________________________________\n" << endl;
 
-	SetWinnerScreenColor(RoundInfo.Winner);
+	SetWinnerScreenColors(RoundInfo.Winner);
 }
 
 enWinner WhoWonTheGame(short Player1WinTime, short ComputerWinTime)
@@ -210,7 +210,7 @@ void ShowFinalGameResults(stGameResults GameResults)
 		cout << "_______________________________________________________________________________________________\n\n";
 
 
-		SetWinnerScreenColor(GameResults.GameWinner);
+		SetWinnerScreenColors(GameResults.GameWinner);
 	}
 
 short ReadHowManyRounds()
